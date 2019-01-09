@@ -9,6 +9,10 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getUsers() {
+
+  	// return this.http.get('https://api.myjson.com/bins/1b7s8m')
     return this.http.get('https://reqres.in/api/users')
+
+   
   }
 }

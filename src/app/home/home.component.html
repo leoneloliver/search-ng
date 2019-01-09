@@ -4,11 +4,18 @@
 <div class="md-form">
   <input type="search" [(ngModel)]="searchText" placeholder="Search text">
 </div>
+
 <ul *ngIf="users">
+  <!-- <li *ngFor="let user of users.results | filter: searchText">
+    <img [src]="user.picture.medium">
+    <p>{{ user.name.first }} {{ user.name.last }}</p>
+  </li> -->
+
   <li *ngFor="let user of users.data | filter: searchText">
     <img [src]="user.avatar">
     <p>{{ user.first_name }} {{ user.last_name }}</p>
   </li>
+
 </ul>
 
 

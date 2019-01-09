@@ -11,11 +11,10 @@ export class HomeComponent implements OnInit {
 
   users: Object;
   searchText = "";
-  results = "";
 
   constructor(private data: DataService) { }
 
-  
+
 
   ngOnInit() {
     this.data.getUsers().subscribe(data => {

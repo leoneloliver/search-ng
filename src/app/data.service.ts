@@ -6,7 +6,9 @@ import { HttpClient } from '@angular/common/http';  // Import it up here
 })
 export class DataService {
 
-  constructor(private http: HttpClient) { }
+	
+
+  constructor(private http: HttpClient) {}
 
   getUsers() {
 

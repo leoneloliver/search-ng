@@ -6,7 +6,7 @@
 </div>
 <div class="search-bar">
   <div class="md-form">
-    <i class="fa fa-search"></i> <input type="search" [(ngModel)]="searchText" placeholder="Search text">
+    <i class="fa fa-search"></i> <input type="search" [(ngModel)]="searchText" placeholder="Search text" />
   </div>
 </div>
 
@@ -16,7 +16,7 @@
   
   <ul id="productWrapper">
    
-    <li class="product-block" *ngFor="let user of users.results | filter: searchText">
+    <li class="product-block" *ngFor='let user of users.results | filter: searchText'>
       <div class="pb-upper">
         <div class="pb-image">
           <a><img [src]="user.picture.medium" border="0" alt="Some great product" class="pb-img"></a>

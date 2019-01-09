@@ -16,7 +16,7 @@ export class FilterPipe implements PipeTransform {
 
     return items.filter(it => {
 
-      return it.name.first .toLocaleLowerCase().includes(searchText) || it.name.last .toLocaleLowerCase().includes(searchText)
+      return it.name.first .toLocaleLowerCase().includes(searchText) || it.name.last .toLocaleLowerCase().includes(searchText);
       //return it.first_name.toLocaleLowerCase().includes(searchText) || it.last_name.toLocaleLowerCase().includes(searchText);
       //return it.company.toLocaleLowerCase().includes(searchText) ;
     });

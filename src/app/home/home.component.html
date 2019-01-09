@@ -6,7 +6,7 @@
 </div>
 <div class="search-bar">
   <div class="md-form">
-    <i class="fa fa-search">🔍</i> <input type="search" [(ngModel)]="searchText" placeholder="Search Users">
+    <i class="fa fa-search"></i> <input type="search" [(ngModel)]="searchText" placeholder="Search text">
   </div>
 </div>
 
@@ -23,8 +23,8 @@
         </div>
         <div class="pb-description">
           <div class="description">
-            <p>{{ user.name.first }} {{ user.name.last }}</p>
-            <p class="address">{{ user.email }}</p>
+            <a>{{ user.name.first }} {{ user.name.last }}</a>
+            <div class="address">{{ user.email }}</div>
           </div>        
       	</div>
     	</div>
@@ -32,17 +32,23 @@
   </ul>
 </div>
 
-<!-- <li *ngFor="let user of users.data | filter: searchText">
-  <img [src]="user.avatar">
-  <p>{{ user.first_name }} {{ user.last_name }}</p>
-</li> -->
-
-<!-- <li *ngFor="let user of users.colleges | filter: searchText">
-  
-  <p>{{ user.company }} </p>
-</li> -->
 
 
+
+ <!--  <li *ngFor="let user of users.results | filter: searchText">
+    <img [src]="user.picture.medium">
+    <p>{{ user.name.first }} {{ user.name.last }}</p>
+  </li> -->
+
+  <!-- <li *ngFor="let user of users.data | filter: searchText">
+    <img [src]="user.avatar">
+    <p>{{ user.first_name }} {{ user.last_name }}</p>
+  </li> -->
+
+  <!-- <li *ngFor="let user of users.colleges | filter: searchText">
+    
+    <p>{{ user.company }} </p>
+  </li> -->
 
 
 

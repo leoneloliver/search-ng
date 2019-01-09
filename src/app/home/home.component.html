@@ -1,22 +1,48 @@
-<h1>Users</h1>
-
-
-<div class="md-form">
-  <input type="search" [(ngModel)]="searchText" placeholder="Search text">
+<div class="panel">
+  <div class="title-container">
+    <h1>Users</h1>
+  </div>
+  
+</div>
+<div class="search-bar">
+  <div class="md-form">
+    <i class="fa fa-search">🔍</i> <input type="search" [(ngModel)]="searchText" placeholder="Search Users">
+  </div>
 </div>
 
-<ul *ngIf="users">
-  <!-- <li *ngFor="let user of users.results | filter: searchText">
-    <img [src]="user.picture.medium">
-    <p>{{ user.name.first }} {{ user.name.last }}</p>
-  </li> -->
 
-  <li *ngFor="let user of users.data | filter: searchText">
-    <img [src]="user.avatar">
-    <p>{{ user.first_name }} {{ user.last_name }}</p>
-  </li>
 
-</ul>
+<div id="productPage" class="list-view">
+  
+  <ul id="productWrapper">
+   
+    <li class="product-block" *ngFor="let user of users.results | filter: searchText">
+      <div class="pb-upper">
+        <div class="pb-image">
+          <a><img [src]="user.picture.medium" border="0" alt="Some great product" class="pb-img"></a>
+        </div>
+        <div class="pb-description">
+          <div class="description">
+            <p>{{ user.name.first }} {{ user.name.last }}</p>
+            <p class="address">{{ user.email }}</p>
+          </div>        
+      	</div>
+    	</div>
+  	</li>
+  </ul>
+</div>
+
+<!-- <li *ngFor="let user of users.data | filter: searchText">
+  <img [src]="user.avatar">
+  <p>{{ user.first_name }} {{ user.last_name }}</p>
+</li> -->
+
+<!-- <li *ngFor="let user of users.colleges | filter: searchText">
+  
+  <p>{{ user.company }} </p>
+</li> -->
+
+
 
 
 

@@ -25,7 +25,10 @@
           <div class="description">
             <p>{{ user.name.first }} {{ user.name.last }}</p>
             <p class="address">{{ user.email }}</p>
-          </div>        
+          </div> 
+
+          <div *ngIf="user.id.name" class="loged"></div>
+
       	</div>
     	</div>
   	</li>

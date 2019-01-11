@@ -141,15 +141,36 @@ li.product-block:hover {
 .list-view .address {
   font: normal 0.7em sans-serif;
 }
-
+.md-form{
+  display: none;
+  -webkit-transition: all .9s ease;
+    -moz-transition: all .9s ease;
+    -o-transition: all .9s ease;
+    -ms-transition: all .9s ease;
+    transition: all .9s ease;
+}
+.open{
+  width: 100%;
+}
+.open .md-form{
+  display: block;
+  width: 100%;
+  -webkit-transition: all .9s ease;
+    -moz-transition: all .9s ease;
+    -o-transition: all .9s ease;
+    -ms-transition: all .9s ease;
+    transition: all .9s ease;
+}
 .search-bar {
   position: fixed;
   /* position: absolute; */
   bottom: 0;
-  padding: 10px;
+  padding: 10px 30px;
   background: #000;
-  width: 100%;
+  height: 58px;
+  
 }
+
 input[type="search"] {
   height: 39px;
   padding: 2px 32px;

@@ -50,10 +50,3 @@
   </div>
 
 </div>
-
-
-<div class="registration" *ngIf="showForm">
-<form [formGroup]="registrationForm" (ngSubmit)="RegisterUser(registrationForm.value);showForm=false;" novalidate>
-...
-</form>
-</div>

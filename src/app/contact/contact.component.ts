@@ -19,9 +19,19 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
     this.messageForm = this.formBuilder.group({
       name: ['', Validators.required],
-      message: ['', Validators.required]
+      message: ['', Validators.required],
+
+      email: ['', Validators.compose([
+        Validators.required,
+        Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
+      ])]
+
     });
   }
+
+
+
+
 
   onSubmit() {
     this.submitted = true;
@@ -31,7 +41,7 @@ export class ContactComponent implements OnInit {
     }
 
     this.success = true;
-    
+
 }
 
 }
